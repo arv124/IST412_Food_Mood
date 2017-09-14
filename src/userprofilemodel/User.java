@@ -16,7 +16,7 @@ public class User {
     
     
     /**
-     * This is the default constructor for the Userc class
+     * This is the default constructor for the User class
      */
     public User(){
     
