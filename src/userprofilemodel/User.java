@@ -21,6 +21,15 @@ public class User {
     public User(){
     
     }
+    /**
+     * Constructor for the User class when username and password are known
+     * @param username
+     * @param password 
+     */
+    public User(String username, String password){
+        this.username = username;
+        this.password = password;
+    }
     
     /**
      * 
@@ -28,8 +37,11 @@ public class User {
      * @param password the password to authenticate.
      * @return the boolean result from authenticate, true is authenticated.
      */
-    
     public boolean authenticate(String username, String password){
         return true;
+    }
+    
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
