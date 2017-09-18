@@ -43,4 +43,12 @@ public class FoodController {
     public void removeFood(int index) {
         foods.remove(index);
     }
+    /**
+     * Get food at index
+     * @param index the index of food
+     * @return The food that is stored at index
+     */
+    public foodmodel.Food getFood(int index) {
+        return foods.get(index);
+    }
 }

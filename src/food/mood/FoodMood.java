@@ -11,11 +11,16 @@ package food.mood;
  */
 public class FoodMood {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    private foodcontroller.FoodController theFood;
+    private moodcontroller.MoodController theMood;
+    
+    public foodMood(foodcontroller.FoodController theFood, moodcontroller.MoodController theMood) {
+        this.theFood = new foodcontroller.FoodController();
+        this.theMood = new moodcontroller.MoodController();
+    }
+    
+    public String getPairAt(int i) {
+        return theFood.getFood(i).toString()+theMood.getMood(i).toString();
     }
     
 }

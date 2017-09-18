@@ -23,8 +23,8 @@ public class User {
     }
     /**
      * Constructor for the User class when username and password are known
-     * @param username
-     * @param password 
+     * @param username What is the username?
+     * @param password What is the password?
      */
     public User(String username, String password){
         this.username = username;
