@@ -63,4 +63,12 @@ public class Mood {
     public void setRecordedAt(Date recordedAt) {
         this.recordedAt = recordedAt;
     }
+    /**
+     * Get the information at index
+     * @param index index of retrieval
+     * @return information at the index
+     */
+    public String getInfo(String index) {
+        return description + " " + recordedAt;
+    }
 }
