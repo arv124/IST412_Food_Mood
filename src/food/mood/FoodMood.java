@@ -11,16 +11,24 @@ package food.mood;
  */
 public class FoodMood {
 
-    private foodcontroller.FoodController theFood;
-    private moodcontroller.MoodController theMood;
-    
-    public foodMood(foodcontroller.FoodController theFood, moodcontroller.MoodController theMood) {
+    private final foodcontroller.FoodController theFood;
+    private final moodcontroller.MoodController theMood;
+    /**
+     * Contructor for FoodMood pair
+     * @param theFood Food Controller
+     * @param theMood Mood Controller
+     */
+    public FoodMood (foodcontroller.FoodController theFood, moodcontroller.MoodController theMood) {
         this.theFood = new foodcontroller.FoodController();
         this.theMood = new moodcontroller.MoodController();
     }
-    
+    /**
+     * Get the Food Mood Pair
+     * @param i
+     * @return String of food and mood seperated by space
+     */
     public String getPairAt(int i) {
-        return theFood.getFood(i).toString()+theMood.getMood(i).toString();
+        return theFood.getFood(i).toString()+" "+theMood.getMood(i).toString();
     }
     
 }

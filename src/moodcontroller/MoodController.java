@@ -46,4 +46,8 @@ public class MoodController {
     public void removeMood(int index) {
         moods.remove(index);
     }
+    
+    public moodmodel.Mood getMood(int index) {
+        return moods.get(index);
+    }
 }
