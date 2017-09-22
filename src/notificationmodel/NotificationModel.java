@@ -9,7 +9,7 @@ package notificationmodel;
  *
  * @author nadaziab
  */
-public class Notification {
+public class NotificationModel {
     
     private String message;
     private String status;
@@ -17,7 +17,7 @@ public class Notification {
     /**
      * This is the default constructor for the Notification class
      */
-    public Notification() {
+    public NotificationModel() {
         
     }
     
@@ -25,7 +25,7 @@ public class Notification {
      * Constructor for Notification with a message
      * @param message 
      */
-    public Notification(String message) {
+    public NotificationModel(String message) {
         this.message = message;
         this.status = "new";
     }

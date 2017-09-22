@@ -13,7 +13,7 @@ import java.util.ArrayList;
  */
 public class NotificationController {
     
-    ArrayList<notificationmodel.Notification> notifications;
+    ArrayList<notificationmodel.NotificationModel> notifications;
     
     /**
      * This is the default constructor for the Notification class
@@ -26,7 +26,7 @@ public class NotificationController {
      * Add a notification to the list of notifications
      * @param notification the notification to be added
      */
-    public void addNotification(notificationmodel.Notification notification) {
+    public void addNotification(notificationmodel.NotificationModel notification) {
         notifications.add(notification);
     }
     
