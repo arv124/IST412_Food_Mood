@@ -13,7 +13,7 @@ import java.util.ArrayList;
  */
 public class MoodController {
     
-    ArrayList<moodmodel.Mood> moods;
+    ArrayList<moodmodel.MoodModel> moods;
     
     /**
      * Default constructor for MoodController class
@@ -26,7 +26,7 @@ public class MoodController {
      * Add a mood
      * @param mood the mood to be added
      */
-    public void addMood(moodmodel.Mood mood) {
+    public void addMood(moodmodel.MoodModel mood) {
         moods.add(mood);
     }
     
@@ -35,7 +35,7 @@ public class MoodController {
      * @param index the index of the mood to be changed
      * @param mood the mood to be added in place of old mood
      */
-    public void changeMood(int index, moodmodel.Mood mood) {
+    public void changeMood(int index, moodmodel.MoodModel mood) {
         moods.set(index, mood);
     }
     
@@ -47,7 +47,7 @@ public class MoodController {
         moods.remove(index);
     }
     
-    public moodmodel.Mood getMood(int index) {
+    public moodmodel.MoodModel getMood(int index) {
         return moods.get(index);
     }
 }

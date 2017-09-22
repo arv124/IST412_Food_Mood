@@ -11,7 +11,7 @@ import java.util.Date;
  *
  * @author nadaziab
  */
-public class Mood {
+public class MoodModel {
     
     private String description;
     private Date recordedAt;
@@ -19,7 +19,7 @@ public class Mood {
     /**
      * The default constructor for the Mood class
      */
-    public Mood() {
+    public MoodModel() {
         
     }
     
@@ -27,7 +27,7 @@ public class Mood {
      * The constructor for the Mood Class with the description
      * @param description the description of the mood
      */
-    public Mood(String description, Date recordedAt) {
+    public MoodModel(String description, Date recordedAt) {
         this.description = description;
         this.recordedAt = recordedAt;
     }

@@ -12,12 +12,12 @@ import java.util.Date;
  *
  * @author Zhewei
  */
-public class Food {
+public class FoodModel {
     
     private String name;
     private Date consumedAt;
     
-    public Food(String name) {
+    public FoodModel(String name) {
         this.name = name;
         this.consumedAt = new Date();
     }

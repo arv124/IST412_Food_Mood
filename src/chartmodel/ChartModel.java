@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package fmcorrelationchartmodel;
+package chartmodel;
 
 /**
  *
  * @author Nate
  */
-public class FMCorrelationChart {
+public class ChartModel {
 
     private final String chartName;
     private final String chartFood;
@@ -24,7 +24,7 @@ public class FMCorrelationChart {
      * @param food food item in the correlation
      * @param mood mood item in the correlation
      */
-    public FMCorrelationChart(String name, String date, String food, String mood) {
+    public ChartModel(String name, String date, String food, String mood) {
         this.chartName = name;
         this.chartDate = date;
         this.chartFood = food;

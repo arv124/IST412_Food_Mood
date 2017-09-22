@@ -3,22 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package fmcorellationchartcontroller;
+package chartcontroller;
 
-import fmcorrelationchartmodel.FMCorrelationChart;
+import chartmodel.ChartModel;
 import java.util.ArrayList;
 
 /**
  *
  * @author Nate
  */
-public class FMCorrelationChartController {
+public class ChartController {
 
-    ArrayList<FMCorrelationChart> charts;
+    ArrayList<ChartModel> charts;
     /**
      * Default constructor for FMCorrelationChartController
      */
-    public FMCorrelationChartController() {
+    public ChartController() {
         charts = new ArrayList<>();
     }
 
@@ -27,7 +27,7 @@ public class FMCorrelationChartController {
      *
      * @param chart chart to be added to the list
      */
-    public void addNewChart(fmcorrelationchartmodel.FMCorrelationChart chart) {
+    public void addNewChart(chartmodel.ChartModel chart) {
         charts.add(chart);
     }
 

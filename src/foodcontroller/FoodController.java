@@ -12,7 +12,7 @@ import java.util.ArrayList;
  * @author Zhewei
  */
 public class FoodController {
-    ArrayList<foodmodel.Food> foods;
+    ArrayList<foodmodel.FoodModel> foods;
     
     /**
      * Default constructor for the FoodController class
@@ -25,7 +25,7 @@ public class FoodController {
      * Add to the list of foods consumed
      * @param food the food to be added
      */
-    public void addFood(foodmodel.Food food) {
+    public void addFood(foodmodel.FoodModel food) {
         foods.add(food);
     }
     /**
@@ -33,7 +33,7 @@ public class FoodController {
      * @param index the index of the food that is to be changed
      * @param food the replacement of the original food at index
      */
-    public void changeFood(int index, foodmodel.Food food) {
+    public void changeFood(int index, foodmodel.FoodModel food) {
         foods.set(index, food);
     }
     /**
@@ -48,7 +48,7 @@ public class FoodController {
      * @param index the index of food
      * @return The food that is stored at index
      */
-    public foodmodel.Food getFood(int index) {
+    public foodmodel.FoodModel getFood(int index) {
         return foods.get(index);
     }
 }
