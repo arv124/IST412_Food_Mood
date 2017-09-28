@@ -4,11 +4,18 @@
  * and open the template in the editor.
  */
 package mainmenucontroller;
-
+import mainmenumodel.*;
+import mainmenuview.*;
 /**
  *
  * @author nadaziab
  */
 public class MainMenuController {
     
+    public MainMenuController() {
+    
+        MainMenuModel theMainMenuModel = new MainMenuModel();
+        
+        MainMenuUI theMainMenuUI = new MainMenuUI();
+    }
 }

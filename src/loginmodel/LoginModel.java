@@ -11,4 +11,9 @@ package loginmodel;
  */
 public class LoginModel {
     
+    public LoginModel(){
+    
+        
+    }
+    
 }

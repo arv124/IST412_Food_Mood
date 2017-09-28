@@ -4,11 +4,23 @@
  * and open the template in the editor.
  */
 package logincontroller;
-
+import loginmodel.*;
+import loginview.*;
+import mainmenucontroller.*;
 /**
  *
  * @author nadaziab
  */
 public class LoginController {
     
+    public LoginController() {
+    
+        LoginModel theLoginModel = new LoginModel();
+        
+        LoginViewUI theLoginViewUI = new LoginViewUI();
+        
+        MainMenuController theMainMenuController = new MainMenuController();
+        
+        
+    }
 }
