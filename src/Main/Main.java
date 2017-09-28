@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package Main;
-import userinterface.*;
+import loginview.*;
 /**
  *
  * @author arv124
@@ -13,7 +13,7 @@ public class Main {
     
     public static void main(String [] args)
     {
-    LoginUI theLogIn = new LoginUI();
+    LoginViewUI theLogIn = new LoginViewUI();
     }
     
 }
