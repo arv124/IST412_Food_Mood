@@ -4,11 +4,20 @@
  * and open the template in the editor.
  */
 package mainmenuview;
-
+import java.awt.event.*;
 /**
  *
  * @author nadaziab
  */
 public class MainMenuUI {
     
+    public MainMenuUI(){
+    
+    
+    
+    
+    }
+    public void actionPerformed(ActionEvent evt) {
+     System.out.println("user selected settings menu");
+}
 }

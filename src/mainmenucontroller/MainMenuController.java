@@ -6,6 +6,9 @@
 package mainmenucontroller;
 import mainmenumodel.*;
 import mainmenuview.*;
+import settingscontroller.*;
+import java.awt.Event.*;
+import java.awt.event.ActionEvent;
 /**
  *
  * @author nadaziab
@@ -17,5 +20,10 @@ public class MainMenuController {
         MainMenuModel theMainMenuModel = new MainMenuModel();
         
         MainMenuUI theMainMenuUI = new MainMenuUI();
+        
+        
+        
+        SettingsController theSettingsController = new SettingsController();
+        
     }
 }
