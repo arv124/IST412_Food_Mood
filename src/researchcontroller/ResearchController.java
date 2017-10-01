@@ -6,7 +6,7 @@
 package researchcontroller;
 
 import java.util.ArrayList;
-import researchmodel.Research;
+import researchmodel.ResearchModel;
 
 /**
  *
@@ -14,19 +14,21 @@ import researchmodel.Research;
  */
 public class ResearchController {
     
-    ArrayList<Research> researchList;
+    ArrayList<ResearchModel> researchList;
     String searchTerms;
+    
     /**
-     * default constructor of ResearchController
+     * Default constructor for ResearchController
      */
     public ResearchController(){
+        System.out.println("ResearchController instantiated");
         this.researchList = new ArrayList<>();
     }
     /**
      * adds new research to available list of research
      * @param research 
      */
-    public void addNewResearch(researchmodel.Research research){
+    public void addNewResearch(researchmodel.ResearchModel research){
           researchList.add(research);
     }
     /**
@@ -41,8 +43,8 @@ public class ResearchController {
      * @param searchTerms terms to be used to find research
      * @return Returns new research that has been found
      */
-     public Research getResearch(String searchTerms){
-         Research newResearch = new Research("temp");
+     public ResearchModel getResearch(String searchTerms){
+         ResearchModel newResearch = new ResearchModel("temp");
          return newResearch;
      }
     

@@ -5,19 +5,27 @@
  */
 package chartmodel;
 
+
 /**
  *
  * @author Nate
  */
 public class ChartModel {
 
-    private final String chartName;
-    private final String chartFood;
-    private final String chartMood;
+    private String chartName;
+    private String chartFood;
+    private String chartMood;
     private String chartDate;
+    
+    /**
+     * This is the default constructor for ChartModel
+     */
+    public ChartModel(){
+        System.out.println("ChartModel Instantiated");
+    }
 
     /**
-     * This is the default constructor for FMCorrelationChart
+     * This is the constructor for ChartModel
      *
      * @param name name associated with the chart
      * @param date date of the correlation to be charted

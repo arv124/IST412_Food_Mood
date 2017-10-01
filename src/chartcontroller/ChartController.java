@@ -16,10 +16,12 @@ public class ChartController {
 
     ArrayList<ChartModel> charts;
     /**
-     * Default constructor for FMCorrelationChartController
+     * Default constructor for ChartController
      */
     public ChartController() {
+        System.out.println("ChartControler Instantiated");
         charts = new ArrayList<>();
+        
     }
 
     /**

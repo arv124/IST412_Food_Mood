@@ -9,15 +9,24 @@ package researchmodel;
  *
  * @author Nate
  */
-public class Research {
+public class ResearchModel {
     
     private String researchName;
     private String research;
+    
     /**
      * Default constructor for Research
+     *  
+     */
+    public ResearchModel(){
+        System.out.println("ResearchModel Instantiated");
+    }
+    
+    /**
+     * Constructor for ResearchModel 
      * @param name 
      */
-    public Research(String name){
+    public ResearchModel(String name){
     
         this.researchName = name;
         this.research = "some food/mood research";
@@ -45,10 +54,6 @@ public class Research {
      */
     public void setResearch(String research) {
         this.research = research;
-    }
-    
-    
-    
-    
+    } 
     
 }

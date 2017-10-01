@@ -5,10 +5,17 @@
  */
 package researchview;
 
+import javax.swing.*;
+
 /**
  *
  * @author Nate
  */
-public class ResearchView {
-    
+public class ResearchView extends JFrame{
+    ResearchView(){
+        setTitle("Empty Frame");
+        setSize(300, 200); // default size is 0,0
+        setLocation(10, 200); // default is 0,0 (top left corner)
+    }
+    JFrame f = new ResearchView();
 }

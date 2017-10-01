@@ -4,11 +4,17 @@
  * and open the template in the editor.
  */
 package researchview;
+import javax.swing.*;
 
 /**
  *
  * @author Nate
  */
-public class ResearchViewUI {
-    
+public class ResearchViewUI extends JFrame{
+    ResearchViewUI(){
+        setTitle("Empty Frame");
+        setSize(300, 200); // default size is 0,0
+        setLocation(10, 200); // default is 0,0 (top left corner)
+    }
+    JFrame f = new ResearchViewUI();
 }
