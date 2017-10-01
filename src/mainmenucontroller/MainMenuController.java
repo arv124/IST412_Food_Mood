@@ -9,6 +9,15 @@ import mainmenuview.*;
 import settingscontroller.*;
 import java.awt.Event.*;
 import java.awt.event.ActionEvent;
+
+import settingscontroller.*;
+import profilecontroller.*;
+import notificationcontroller.*;
+import settingscontroller.*;
+import foodcontroller.*;
+import moodcontroller.*;
+import statscontroller.*;
+import recommendationscontroller.*;
 /**
  *
  * @author nadaziab
@@ -24,6 +33,14 @@ public class MainMenuController {
         
         
         SettingsController theSettingsController = new SettingsController();
+        ProfileController theProfileController = new ProfileController();
+        NotificationController theNotificationController = new NotificationController();
+        FoodController theFoodController = new FoodController();
+        MoodController theMoodController = new MoodController(); //if only controlling moods was this easy.
+        StatsController theStatsController = new StatsController();
+        RecommendationsController theRecomendationConroller = new RecommendationsController();
+        
+        
         
     }
 }
