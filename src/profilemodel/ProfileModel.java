@@ -13,7 +13,7 @@ public class ProfileModel {
     
     public ProfileModel(){
         
-        
+        System.out.println("ProfileModel instantiated");
     
     }
 }

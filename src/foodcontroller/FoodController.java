@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 package foodcontroller;
+import foodmodel.*;
+import foodview.*;
 
 import java.util.ArrayList;
 
@@ -18,6 +20,9 @@ public class FoodController {
      * Default constructor for the FoodController class
      */
     public FoodController() {
+        System.out.println("FoodController instantiated");
+        FoodModel theFoodModel = new FoodModel();
+        //FoodView theFoodView = new FoodView();
         foods = new ArrayList<>();
     }
     

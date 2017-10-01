@@ -12,7 +12,7 @@ package statsmodel;
 public class StatsModel {
     
     public StatsModel(){
-    
+        System.out.println("StatsModel instantiated");
     }
     
 }

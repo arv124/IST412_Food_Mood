@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 package recommendationscontroller;
+import recommendationsmodel.*;
+import recommendationsview.*;
 
 /**
  *
@@ -11,4 +13,9 @@ package recommendationscontroller;
  */
 public class RecommendationsController {
     
+    public RecommendationsController() {
+        System.out.println("RecommendationsController instantiated");
+        RecommendationsModel theRecommendationsModel = new RecommendationsModel();
+        //RecommendationsView theRecommendationsView = new RecommendationsView();
+    }
 }

@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 package moodcontroller;
+import moodmodel.*;
+import moodview.*;
 
 import java.util.ArrayList;
 
@@ -19,7 +21,9 @@ public class MoodController {
      * Default constructor for MoodController class
      */
     public MoodController() {
-        
+        System.out.println("MoodController instantiated");
+        MoodModel theMoodModel = new MoodModel();
+        //MoodView theMoodView = new MoodView();
     }
     
     /**

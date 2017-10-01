@@ -17,6 +17,10 @@ public class FoodModel {
     private String name;
     private Date consumedAt;
     
+    public FoodModel() {
+        System.out.println("FoodModel instantiated");
+    }
+    
     public FoodModel(String name) {
         this.name = name;
         this.consumedAt = new Date();

@@ -20,7 +20,7 @@ public class MoodModel {
      * The default constructor for the Mood class
      */
     public MoodModel() {
-        
+        System.out.println("MoodModel instantiated");
     }
     
     /**

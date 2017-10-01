@@ -11,4 +11,7 @@ package mainmenumodel;
  */
 public class MainMenuModel {
     
+    public MainMenuModel() {
+        System.out.println("MainMenuModel instantiated");
+    }
 }

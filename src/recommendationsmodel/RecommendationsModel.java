@@ -11,8 +11,8 @@ package recommendationsmodel;
  */
 public class RecommendationsModel {
     
-    RecommendationsModel(){
-    
+    public RecommendationsModel(){
+        System.out.println("RecommendationsModel instantiated");
     }
     
 }

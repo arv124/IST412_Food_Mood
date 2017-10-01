@@ -12,8 +12,7 @@ package loginmodel;
 public class LoginModel {
     
     public LoginModel(){
-    
-        
+        System.out.println("LoginModel instantiated");
     }
     
 }

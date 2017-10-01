@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 package statscontroller;
+import statsmodel.*;
+import statsview.*;
 
 /**
  *
@@ -11,4 +13,9 @@ package statscontroller;
  */
 public class StatsController {
     
+    public StatsController() {
+        System.out.println("StatsController instantiated");
+        StatsModel theStatsModel = new StatsModel();
+        //StatsView theStatsView = new StatsView();
+    }
 }

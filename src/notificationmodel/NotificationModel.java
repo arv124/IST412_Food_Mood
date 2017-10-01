@@ -18,7 +18,7 @@ public class NotificationModel {
      * This is the default constructor for the Notification class
      */
     public NotificationModel() {
-        
+        System.out.println("NotificationModel instantiated");
     }
     
     /**

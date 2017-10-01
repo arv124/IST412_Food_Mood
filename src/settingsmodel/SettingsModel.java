@@ -12,6 +12,6 @@ package settingsmodel;
 public class SettingsModel {
     
     public SettingsModel(){
-    
+        System.out.println("SettingsModel instantiated");
     }
 }

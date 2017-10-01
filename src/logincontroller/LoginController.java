@@ -15,6 +15,7 @@ public class LoginController {
     
     public LoginController() {
     
+        System.out.println("LoginController instantiated");
         LoginModel theLoginModel = new LoginModel();
         
         LoginViewUI theLoginViewUI = new LoginViewUI();

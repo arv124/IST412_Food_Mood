@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 package notificationcontroller;
+import notificationmodel.*;
+import notificationview.*;
 
 import java.util.ArrayList;
 
@@ -19,6 +21,9 @@ public class NotificationController {
      * This is the default constructor for the Notification class
      */
     public NotificationController() {
+        System.out.println("NotificationController instantiated");
+        NotificationModel theNotificationModel = new NotificationModel();
+       //NotificationView theNotificationView = new NotificationView();
         notifications = new ArrayList<>();
     }
     
