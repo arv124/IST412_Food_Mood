@@ -11,4 +11,8 @@ package recommendationsmodel;
  */
 public class RecommendationsModel {
     
+    RecommendationsModel(){
+    
+    }
+    
 }

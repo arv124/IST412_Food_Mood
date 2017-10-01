@@ -11,4 +11,9 @@ package profilemodel;
  */
 public class ProfileModel {
     
+    public ProfileModel(){
+        
+        
+    
+    }
 }

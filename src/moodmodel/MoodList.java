@@ -11,4 +11,8 @@ package moodmodel;
  */
 public class MoodList {
     
+    public MoodList(){
+    
+    }
+    
 }

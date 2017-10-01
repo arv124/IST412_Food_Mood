@@ -11,4 +11,8 @@ package statsmodel;
  */
 public class StatsModel {
     
+    public StatsModel(){
+    
+    }
+    
 }
