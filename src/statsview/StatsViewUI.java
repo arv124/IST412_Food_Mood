@@ -4,11 +4,18 @@
  * and open the template in the editor.
  */
 package statsview;
+import javax.swing.*;
 
 /**
  *
- * @author Alex
+ * @author nadaziab
  */
-public class StatsViewUI {
-    
+public class StatsViewUI extends JFrame {
+
+    public StatsViewUI() {
+        setTitle("My Empty Frame");
+        setSize(300, 200); // default size is 0,0
+        setLocation(10, 200); // default is 0,0 (top left corner)
+    }
+    JFrame f = new StatsViewUI();
 }

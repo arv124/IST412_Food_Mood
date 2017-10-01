@@ -11,4 +11,7 @@ package settingsmodel;
  */
 public class SettingsModel {
     
+    public SettingsModel(){
+    
+    }
 }

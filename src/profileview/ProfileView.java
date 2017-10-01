@@ -4,11 +4,18 @@
  * and open the template in the editor.
  */
 package profileview;
+import javax.swing.*;
 
 /**
  *
- * @author Nate
+ * @author nadaziab
  */
-public class ProfileView {
-    
+public class ProfileView extends JFrame {
+
+    public ProfileView() {
+        setTitle("My Empty Frame");
+        setSize(300, 200); // default size is 0,0
+        setLocation(10, 200); // default is 0,0 (top left corner)
+    }
+    JFrame f = new ProfileView();
 }
