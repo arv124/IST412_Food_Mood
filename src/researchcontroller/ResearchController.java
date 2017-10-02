@@ -23,6 +23,7 @@ public class ResearchController {
     public ResearchController(){
         System.out.println("ResearchController instantiated");
         this.researchList = new ArrayList<>();
+        ResearchModel testModel = new ResearchModel();
     }
     /**
      * adds new research to available list of research

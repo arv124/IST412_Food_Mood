@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package mainmenucontroller;
+import chartcontroller.ChartController;
 import mainmenumodel.*;
 import mainmenuview.*;
 import settingscontroller.*;
@@ -18,6 +19,7 @@ import foodcontroller.*;
 import moodcontroller.*;
 import statscontroller.*;
 import recommendationscontroller.*;
+import researchcontroller.ResearchController;
 /**
  *
  * @author nadaziab
@@ -65,6 +67,10 @@ public class MainMenuController {
         runStats();
         System.out.println();
         runRecommendations();
+        System.out.println();
+        runCharts();
+        System.out.println();
+        runResearch();                
     }
     
     private void runSettings() {
@@ -107,5 +113,16 @@ public class MainMenuController {
         System.out.println("** Recommendations test start **");
         RecommendationsController theRecomendationConroller = new RecommendationsController();
         System.out.println("** Recommendations test end **");
+    }
+    
+    private void runCharts(){
+        System.out.println("** Chart test start **");
+        ChartController theChartController = new ChartController();
+        System.out.println("** Chart test end **");
+    }
+    private void runResearch(){
+        System.out.println("** Research test start **");
+        ResearchController theResearchController = new ResearchController();
+        System.out.println("** Research test end **");
     }
 }

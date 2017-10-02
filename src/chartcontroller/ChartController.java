@@ -5,7 +5,8 @@
  */
 package chartcontroller;
 
-import chartmodel.ChartModel;
+import chartmodel.*;
+import chartview.ChartView;
 import java.util.ArrayList;
 
 /**
@@ -15,13 +16,15 @@ import java.util.ArrayList;
 public class ChartController {
 
     ArrayList<ChartModel> charts;
+    ChartModel newChartData;
+    ChartView testChartView;
     /**
      * Default constructor for ChartController
      */
     public ChartController() {
         System.out.println("ChartControler Instantiated");
         charts = new ArrayList<>();
-        
+        newChartData = new ChartModel();       
     }
 
     /**
