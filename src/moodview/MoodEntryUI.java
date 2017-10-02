@@ -5,10 +5,18 @@
  */
 package moodview;
 
+import javax.swing.*;
+
 /**
  *
  * @author Alex
  */
-public class MoodEntryUI {
+public class MoodEntryUI extends JFrame{
     
+    public MoodEntryUI(){
+        setTitle("My Empty Frame");
+        setSize(300, 200); // default size is 0,0
+        setLocation(10, 200); // default is 0,0 (top left corner)
+    }
+    JFrame f = new MoodEntryUI();
 }

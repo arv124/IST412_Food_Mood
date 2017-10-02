@@ -5,10 +5,18 @@
  */
 package historyview;
 
+import javax.swing.*;
+
 /**
  *
  * @author Nate
  */
-public class HistoryView {
-    
+public class HistoryView extends JFrame{
+  
+    public HistoryView(){
+        setTitle("My Empty Frame");
+        setSize(300, 200); // default size is 0,0
+        setLocation(10, 200); // default is 0,0 (top left corner)
+    }
+    JFrame f = new HistoryView();
 }
