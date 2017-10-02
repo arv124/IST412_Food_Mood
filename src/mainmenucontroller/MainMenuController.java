@@ -8,6 +8,7 @@ import chartcontroller.ChartController;
 import mainmenumodel.*;
 import mainmenuview.*;
 import settingscontroller.*;
+import relationscontroller.*;
 import java.awt.Event.*;
 import java.awt.event.ActionEvent;
 
@@ -124,5 +125,11 @@ public class MainMenuController {
         System.out.println("** Research test start **");
         ResearchController theResearchController = new ResearchController();
         System.out.println("** Research test end **");
+    }
+    
+    private void runRelations() {
+        System.out.println("** Relations test start **");
+        RelationsController theRelationController = new RelationsController();
+        System.out.println("** Relations test end **");
     }
 }
