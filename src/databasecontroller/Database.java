@@ -19,10 +19,42 @@ import java.net.URL;
 public class Database {
     
     public String url = "https://foodmood-a4f9d.firebaseio.com/";
+    private String username;
+    private String password;
     
     public Database() {}
     //*********************************************************************Profile Section********************************************************************
-    //This method should take a ProfileModel object.
+ 
+    public boolean authProfile(String username, String password)
+    {
+     String url = "https://foodmood-a4f9d.firebaseio.com/profiles/" + username + ".json";
+        String inputLine = "";
+        //System.out.println(url);
+        try {
+            URL urlConnect = new URL(url);
+            HttpURLConnection con = (HttpURLConnection) urlConnect.openConnection();
+            con.setDoOutput(true);
+            con.setDoInput(true);
+            con.setRequestMethod("GET");
+            BufferedReader in = new BufferedReader(
+                    new InputStreamReader(con.getInputStream()));
+
+            inputLine = in.readLine();
+
+            if (!inputLine.equals(null))
+                    {
+                    return true;
+                    }
+            else return false;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+    
+    
+    
+//This method should take a ProfileModel object.
     public void POSTProfile() throws Exception {
         try {
             URL urlConnection = new URL(url);
