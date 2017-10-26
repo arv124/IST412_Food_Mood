@@ -41,7 +41,7 @@ public class Database {
 
             inputLine = in.readLine();
 
-            if (!inputLine.equals(null))
+            if (inputLine.contains(username) && inputLine.contains(password))
                     {
                     return true;
                     }
