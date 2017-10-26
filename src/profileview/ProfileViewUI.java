@@ -9,12 +9,17 @@ import javax.swing.*;
  *
  * @author nadaziab
  */
-public class ProfileViewUI extends JFrame{
+public class ProfileViewUI {
     
-public ProfileViewUI() {
-                setTitle("My Empty Frame");
-                setSize(300, 200); // default size is 0,0
-                setLocation(10, 200); // default is 0,0 (top left corner)
-            }
-                JFrame f = new ProfileViewUI();
+    JFrame f = new JFrame();
+    
+    public ProfileViewUI() {
+        f.setTitle("Profile");
+        f.setSize(800, 500); // default size is 0,0
+        f.setLocation(300, 300); // default is 0,0 (top left corner)
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        f.setVisible(true);
+        
+    }
+    
 }

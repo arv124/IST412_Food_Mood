@@ -3,41 +3,38 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package loginview;
+package profileview;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
+import javax.swing.*;
 
 /**
  *
  * @author nadaziab
  */
-public class LoginViewUI {
+public class CreateProfileUI {
     
     private JFrame f;
     private JPanel p;
     
-    private JLabel usernameLabel, passwordLabel;
-    private JTextField usernameField, passwordField;
-    public JButton loginBtn, createProfileBtn;
+    private JLabel usernameLabel, passwordLabel, ageLabel, weightLabel;
+    private JTextField usernameField, passwordField, ageField, weightField;
+    public JButton createBtn;
     
     /**
-     * default constructor for LoginViewUI
+     * Default constructor for CreateProfileUI
      */
-    public LoginViewUI() {
+    public CreateProfileUI() {
+        
         f = new JFrame();
         p = new JPanel();
         f.setLayout(new BorderLayout());
         p.setLayout(new GridBagLayout());
         
-        f.setTitle("Login");
+        f.setTitle("Create User Profile");
         f.setSize(500, 500); // default size is 0,0
         //f.setLocation(300, 300); // default is 0,0 (top left corner)
         f.setLocationRelativeTo(null);
@@ -78,15 +75,32 @@ public class LoginViewUI {
         c.gridy = 1;
         p.add(passwordField, c);
         
-        loginBtn = new JButton("Login");
+        ageLabel = new JLabel("Age");
+        c.gridx = 0;
+        c.gridy = 2;
+        p.add(ageLabel, c);
+        
+        ageField = new JTextField("");
+        ageField.setPreferredSize(new Dimension(100, 30));
         c.gridx = 1;
         c.gridy = 2;
-        p.add(loginBtn, c);
+        p.add(ageField, c);
         
-        createProfileBtn = new JButton("Create a Profile");
+        weightLabel = new JLabel("Weight");
+        c.gridx = 0;
+        c.gridy = 3;
+        p.add(weightLabel, c);
+        
+        weightField = new JTextField("");
+        weightField.setPreferredSize(new Dimension(100, 30));
         c.gridx = 1;
         c.gridy = 3;
-        p.add(createProfileBtn, c);
+        p.add(weightField, c);
+        
+        createBtn = new JButton("Create Profile");
+        c.gridx = 1;
+        c.gridy = 4;
+        p.add(createBtn, c);
     }
     
     /**
@@ -101,7 +115,23 @@ public class LoginViewUI {
      * gets password input
      * @return password as a String
      */
-    public String getPassword() {
+    public String getPassowrd() {
         return passwordField.getText();
+    }
+    
+    /**
+     * gets age input
+     * @return age as a String
+     */
+    public String getAge() {
+        return ageField.getText();
+    }
+    
+    /**
+     * gets weight input
+     * @return weight as a String
+     */
+    public String getWeight() {
+        return weightField.getText();
     }
 }

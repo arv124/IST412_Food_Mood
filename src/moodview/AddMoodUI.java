@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package loginview;
+package moodview;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
@@ -19,25 +19,25 @@ import javax.swing.JTextField;
  *
  * @author nadaziab
  */
-public class LoginViewUI {
+public class AddMoodUI {
     
     private JFrame f;
     private JPanel p;
     
-    private JLabel usernameLabel, passwordLabel;
-    private JTextField usernameField, passwordField;
-    public JButton loginBtn, createProfileBtn;
+    private JLabel moodDescrLabel, moodDateLabel;
+    private JTextField moodDescrField, moodDateField;
+    private JButton addBtn;
     
     /**
-     * default constructor for LoginViewUI
+     * default constructor for AddMoodUI
      */
-    public LoginViewUI() {
+    public AddMoodUI() {
         f = new JFrame();
         p = new JPanel();
         f.setLayout(new BorderLayout());
         p.setLayout(new GridBagLayout());
         
-        f.setTitle("Login");
+        f.setTitle("Add Mood");
         f.setSize(500, 500); // default size is 0,0
         //f.setLocation(300, 300); // default is 0,0 (top left corner)
         f.setLocationRelativeTo(null);
@@ -56,52 +56,48 @@ public class LoginViewUI {
         GridBagConstraints c = new GridBagConstraints();
         c.fill = GridBagConstraints.BOTH;
         
-        usernameLabel = new JLabel("Username");
+        moodDescrLabel = new JLabel("Mood Description");
         c.gridx = 0;
         c.gridy = 0;
-        p.add(usernameLabel, c);
+        p.add(moodDescrLabel, c);
         
-        usernameField = new JTextField("");
-        usernameField.setPreferredSize(new Dimension(100, 30));
+        moodDescrField = new JTextField("");
+        moodDescrField.setPreferredSize(new Dimension(100, 30));
         c.gridx = 1;
         c.gridy = 0;
-        p.add(usernameField, c);
+        p.add(moodDescrField, c);
         
-        passwordLabel = new JLabel("Password");
+        moodDateLabel = new JLabel("Time Recorded");
         c.gridx = 0;
         c.gridy = 1;
-        p.add(passwordLabel, c);
+        p.add(moodDateLabel, c);
         
-        passwordField = new JTextField("");
-        passwordField.setPreferredSize(new Dimension(100, 30));
+        moodDateField = new JTextField("");
+        moodDateField.setPreferredSize(new Dimension(100, 30));
         c.gridx = 1;
         c.gridy = 1;
-        p.add(passwordField, c);
+        p.add(moodDateField, c);
         
-        loginBtn = new JButton("Login");
+        addBtn = new JButton("Add Mood");
         c.gridx = 1;
         c.gridy = 2;
-        p.add(loginBtn, c);
-        
-        createProfileBtn = new JButton("Create a Profile");
-        c.gridx = 1;
-        c.gridy = 3;
-        p.add(createProfileBtn, c);
+        p.add(addBtn, c);
     }
     
     /**
-     * gets username input
-     * @return username as a String
+     * gets mood description input
+     * @return mood description as a String
      */
-    public String getUsername() {
-        return usernameField.getText();
+    public String getMoodDescription() {
+        return moodDescrField.getText();
     }
     
     /**
-     * gets password input
-     * @return password as a String
+     * gets mood date input
+     * @return mood date as a String
      */
-    public String getPassword() {
-        return passwordField.getText();
+    public String getMoodDate() {
+        return moodDateField.getText();
     }
+    
 }
