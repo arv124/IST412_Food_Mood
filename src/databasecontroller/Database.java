@@ -43,6 +43,7 @@ public class Database {
 
             if (inputLine.contains(username) && inputLine.contains(password))
                     {
+                        System.out.println("Holy shit it works!");
                     return true;
                     }
             else return false;
