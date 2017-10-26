@@ -10,12 +10,14 @@ import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import javax.swing.*;
+import java.awt.event.*;
+import databasecontroller.Database;
 
 /**
  *
  * @author nadaziab
  */
-public class CreateProfileUI {
+public class CreateProfileUI implements ActionListener {
     
     private JFrame f;
     private JPanel p;
@@ -101,6 +103,7 @@ public class CreateProfileUI {
         c.gridx = 1;
         c.gridy = 4;
         p.add(createBtn, c);
+        createBtn.addActionListener(this);
     }
     
     /**
@@ -133,5 +136,13 @@ public class CreateProfileUI {
      */
     public String getWeight() {
         return weightField.getText();
+    }
+    
+    @Override
+    public void actionPerformed(ActionEvent e)
+    { 
+    Database d = new Database();
+    try{ d.POSTProfile(); }
+    catch (Exception ex){};
     }
 }

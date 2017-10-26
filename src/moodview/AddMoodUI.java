@@ -14,12 +14,14 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import databasecontroller.Database;
+import java.awt.event.*;
 
 /**
  *
  * @author nadaziab
  */
-public class AddMoodUI {
+public class AddMoodUI implements ActionListener{
     
     private JFrame f;
     private JPanel p;
@@ -82,6 +84,7 @@ public class AddMoodUI {
         c.gridx = 1;
         c.gridy = 2;
         p.add(addBtn, c);
+        addBtn.addActionListener(this);
     }
     
     /**
@@ -100,4 +103,11 @@ public class AddMoodUI {
         return moodDateField.getText();
     }
     
+    @Override
+    public void actionPerformed(ActionEvent e)
+    { 
+    Database d = new Database();
+    try{ d.POSTMood(); }
+    catch (Exception ex){};
+    }
 }
