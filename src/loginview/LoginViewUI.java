@@ -5,6 +5,7 @@
  */
 package loginview;
 
+import databasecontroller.Database;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
@@ -100,7 +101,9 @@ public class LoginViewUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 //authenticate login
-                
+                Database d = new Database();
+                d.authProfile(getUsername(), getPassword());
+               
                 //if authenticated, launch main menu
                 MainMenuUI mainMenuUI = new MainMenuUI();
                 f.dispose();
