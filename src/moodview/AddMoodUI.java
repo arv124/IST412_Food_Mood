@@ -20,6 +20,8 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import databasecontroller.Database;
+import java.awt.event.*;
 
 /**
  *
@@ -168,5 +170,4 @@ public class AddMoodUI {
     public String getMoodDate() {
         return moodDateField.getText();
     }
-    
 }

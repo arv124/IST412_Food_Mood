@@ -11,13 +11,15 @@ import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.event.*;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 import javax.swing.*;
 
 /**
  *
  * @author nadaziab
  */
-public class AddFoodUI implements ActionListener {
+public class AddFoodUI {
     
     private JFrame f;
     private JPanel p;
@@ -133,7 +135,6 @@ public class AddFoodUI implements ActionListener {
         c.gridx = 1;
         c.gridy = 3;
         p.add(addBtn, c);
-        addBtn.addActionListener(this);
     }
     
     private void addActionListeners() {
@@ -163,13 +164,5 @@ public class AddFoodUI implements ActionListener {
      */
     public String getFoodDate() {
         return foodDateField.getText();
-    }
-    
-    @Override
-    public void actionPerformed(ActionEvent e)
-    { 
-    Database d = new Database();
-    try{ d.POSTFood(); }
-    catch (Exception ex){};
     }
 }

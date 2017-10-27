@@ -20,7 +20,7 @@ import databasecontroller.Database;
  *
  * @author nadaziab
  */
-public class CreateProfileUI implements ActionListener {
+public class CreateProfileUI {
     
     private JFrame f;
     private JPanel p;
@@ -107,7 +107,6 @@ public class CreateProfileUI implements ActionListener {
         c.gridx = 1;
         c.gridy = 4;
         p.add(createBtn, c);
-        createBtn.addActionListener(this);
     }
     
     private void addActionListeners() {
@@ -156,13 +155,5 @@ public class CreateProfileUI implements ActionListener {
      */
     public String getWeight() {
         return weightField.getText();
-    }
-    
-    @Override
-    public void actionPerformed(ActionEvent e)
-    { 
-    Database d = new Database();
-    try{ d.POSTProfile(); }
-    catch (Exception ex){};
     }
 }
