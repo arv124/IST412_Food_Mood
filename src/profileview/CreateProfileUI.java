@@ -5,11 +5,15 @@
  */
 package profileview;
 
+import databasecontroller.Database;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.*;
+import loginview.LoginViewUI;
 
 /**
  *
@@ -41,6 +45,7 @@ public class CreateProfileUI {
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
   
         createComponents();
+        addActionListeners();
         
         f.add(p, BorderLayout.CENTER);
         f.setVisible(true);
@@ -101,6 +106,22 @@ public class CreateProfileUI {
         c.gridx = 1;
         c.gridy = 4;
         p.add(createBtn, c);
+    }
+    
+    private void addActionListeners() {
+        
+        createBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Database d = new Database();
+                try { 
+                    d.POSTProfile();
+                } catch (Exception ex){};
+                
+                f.dispose();
+                LoginViewUI loginUI = new LoginViewUI();
+            }
+        });
     }
     
     /**

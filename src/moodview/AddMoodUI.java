@@ -5,11 +5,17 @@
  */
 package moodview;
 
+import databasecontroller.Database;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -24,8 +30,13 @@ public class AddMoodUI {
     private JFrame f;
     private JPanel p;
     
-    private JLabel moodDescrLabel, moodDateLabel;
-    private JTextField moodDescrField, moodDateField;
+    private Calendar calendar;
+    
+    private JLabel moodDescrLabel, moodDateLabel, moodTimeLabel;
+    private JTextField moodDescrField, moodDateField, dateNumField, yearField, timeHourField, timeMinuteField;
+    private final String[] MONTHARRAY = {"January","February","March","April","May","June","July","August","September","October","November","December"};
+    private final String[] TIMEPERIOD = {"AM", "PM"};
+    private JComboBox months, timePeriod;
     private JButton addBtn;
     
     /**
@@ -43,7 +54,10 @@ public class AddMoodUI {
         f.setLocationRelativeTo(null);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
   
+        calendar = new GregorianCalendar();
+        
         createComponents();
+        addActionListeners();
         
         f.add(p, BorderLayout.CENTER);
         f.setVisible(true);
@@ -67,21 +81,76 @@ public class AddMoodUI {
         c.gridy = 0;
         p.add(moodDescrField, c);
         
-        moodDateLabel = new JLabel("Time Recorded");
+        moodDateLabel = new JLabel("Date Recorded");
         c.gridx = 0;
         c.gridy = 1;
         p.add(moodDateLabel, c);
         
+        months = new JComboBox(MONTHARRAY);
+        months.setSelectedIndex(calendar.get(Calendar.MONTH)); //defaults to current month
+        c.gridx = 1;
+        c.gridy = 1;
+        p.add(months, c);
+        
+        String date = String.valueOf(calendar.get(Calendar.DATE));
+        
+        dateNumField = new JTextField(date);
+        c.gridx = 2;
+        c.gridy = 1;
+        p.add(dateNumField, c);
+        
+        String year = String.valueOf(calendar.get(Calendar.YEAR));
+        
+        yearField = new JTextField(year);
+        c.gridx = 3;
+        c.gridy = 1;
+        p.add(yearField, c);
+        
+        moodTimeLabel = new JLabel("Time Recorded");
+        c.gridx = 0;
+        c.gridy = 2;
+        p.add(moodTimeLabel, c);
+        
+        timeHourField = new JTextField(String.valueOf(calendar.get(Calendar.HOUR)));
+        c.gridx = 1;
+        c.gridy = 2;
+        p.add(timeHourField, c);
+        
+        timeMinuteField = new JTextField(String.valueOf(calendar.get(Calendar.MINUTE)));
+        c.gridx = 2;
+        c.gridy = 2;
+        p.add(timeMinuteField, c);
+        
+        timePeriod = new JComboBox(TIMEPERIOD);
+        c.gridx = 3;
+        c.gridy = 2;
+        p.add(timePeriod, c);
+        
+        /*
         moodDateField = new JTextField("");
         moodDateField.setPreferredSize(new Dimension(100, 30));
         c.gridx = 1;
         c.gridy = 1;
         p.add(moodDateField, c);
+        */
         
         addBtn = new JButton("Add Mood");
         c.gridx = 1;
-        c.gridy = 2;
+        c.gridy = 3;
         p.add(addBtn, c);
+    }
+    
+    private void addActionListeners() {
+        
+        addBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Database d = new Database();
+                try { 
+                    d.POSTMood();
+                } catch (Exception ex){};
+            }
+        });
     }
     
     /**

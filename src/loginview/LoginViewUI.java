@@ -9,11 +9,15 @@ import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import mainmenuview.MainMenuUI;
+import profileview.CreateProfileUI;
 
 /**
  *
@@ -44,6 +48,7 @@ public class LoginViewUI {
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
   
         createComponents();
+        addActionListeners();
         
         f.add(p, BorderLayout.CENTER);
         f.setVisible(true);
@@ -87,6 +92,29 @@ public class LoginViewUI {
         c.gridx = 1;
         c.gridy = 3;
         p.add(createProfileBtn, c);
+    }
+    
+    private void addActionListeners() {
+        
+        loginBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //authenticate login
+                
+                //if authenticated, launch main menu
+                MainMenuUI mainMenuUI = new MainMenuUI();
+                f.dispose();
+            }
+        });
+        
+        createProfileBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //leave login, go to CreateProfile
+                CreateProfileUI createProfileUI = new CreateProfileUI();
+                f.dispose();
+            }
+        });
     }
     
     /**

@@ -8,6 +8,7 @@ import foodview.*;
 import profileview.*;
 import logincontroller.*;
 import loginview.*;
+import mainmenuview.*;
 import moodview.*;
 /**
  *
@@ -21,6 +22,7 @@ public class Main {
     
     
     LoginViewUI loginUI = new LoginViewUI();
+    //MainMenuUI mainMenuUI = new MainMenuUI();
     //CreateProfileUI createProfileUI = new CreateProfileUI();
     //AddFoodUI addFoodUI = new AddFoodUI();
     //AddMoodUI addMoodUI = new AddMoodUI();
