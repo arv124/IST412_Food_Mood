@@ -17,14 +17,14 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-import mainmenuview.MainMenuUI;
-import profileview.CreateProfileUI;
+import java.awt.event.*;
+import databasecontroller.Database;
 
 /**
  *
  * @author nadaziab
  */
-public class LoginViewUI {
+public class LoginViewUI implements ActionListener {
     
     private JFrame f;
     private JPanel p;
@@ -88,6 +88,7 @@ public class LoginViewUI {
         c.gridx = 1;
         c.gridy = 2;
         p.add(loginBtn, c);
+        loginBtn.addActionListener(this);
         
         createProfileBtn = new JButton("Create a Profile");
         c.gridx = 1;
@@ -134,5 +135,12 @@ public class LoginViewUI {
      */
     public String getPassword() {
         return passwordField.getText();
+    }
+    
+    @Override
+    public void actionPerformed(ActionEvent e) 
+    { 
+    Database d = new Database();
+    d.authProfile(this.getUsername(), this.getPassword());
     }
 }

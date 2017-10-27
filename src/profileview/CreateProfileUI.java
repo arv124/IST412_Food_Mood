@@ -13,13 +13,14 @@ import java.awt.GridBagLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
-import loginview.LoginViewUI;
+import java.awt.event.*;
+import databasecontroller.Database;
 
 /**
  *
  * @author nadaziab
  */
-public class CreateProfileUI {
+public class CreateProfileUI implements ActionListener {
     
     private JFrame f;
     private JPanel p;
@@ -106,6 +107,7 @@ public class CreateProfileUI {
         c.gridx = 1;
         c.gridy = 4;
         p.add(createBtn, c);
+        createBtn.addActionListener(this);
     }
     
     private void addActionListeners() {
@@ -154,5 +156,13 @@ public class CreateProfileUI {
      */
     public String getWeight() {
         return weightField.getText();
+    }
+    
+    @Override
+    public void actionPerformed(ActionEvent e)
+    { 
+    Database d = new Database();
+    try{ d.POSTProfile(); }
+    catch (Exception ex){};
     }
 }
